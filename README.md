@@ -1,6 +1,5 @@
  # mapstruct-field-mappings
- 
-612/5000
+
 MapStruct is a code generator that simplifies the implementation of mappings between java objects.
 
 The great virtue of this code generator, is to generate the mapping code in time of complication and not of execution since as we know the use of reflection as it uses dozzer or orikaMapper is something expensive to do and more if it is done again and again once for each mapping that is needed. Having the code already generated these tasks will be much faster.
@@ -14,17 +13,17 @@ I took a look at the code that it generates and it did not seem at all bad to me
  ![CustomerDtoDefintion](images/CarListToCarDTOList.png?raw=true "CarListToCarDTOList definition")
 
 
- #Requisitos 
+ # Requisitos 
  - [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-3848520.html).
  - [Meven 3.X](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-3848520.html).
  - [mapstruct](https://plugins.jetbrains.com/plugin/6317-lombok-plugin).
 
- #Class diagram
+ # Class diagram
 
  ![CustomerDtoDefintion](images/DiagramDTO.png?raw=true "Diagram DTO definition")
 
  
- #Car mapper example
+ # Car mapper example
  
  - Automatic mapping atributes with same name and type (ignoreProperty,surname, make)
  - Custom converter Brake<->String. Property brake-> brakeName (@Mapper(uses = {CarConverters.class}))
