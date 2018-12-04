@@ -1,9 +1,8 @@
  # mapstruct-field-mappings
 
 MapStruct is a code generator that simplifies the implementation of mappings between java objects.
-
-The great virtue of this code generator, is to generate the mapping code in time of complication and not of execution since as we know the use of reflection as it uses dozzer or orikaMapper is something expensive to do and more if it is done again and again once for each mapping that is needed. Having the code already generated these tasks will be much faster.
-
+The great virtue of this code generator, is to generate the mapping code in time of complication and not of execution since as we know the use of reflection as it uses
+dozzer or orikaMapper is something expensive to do and more if it is done again and again once for each mapping that is needed. Having the code already generated these tasks will be much faster.
 I took a look at the code that it generates and it did not seem at all bad to me the way it does, since the manuel way that is done as a developer is very similar
 
  ![CustomerDtoDefintion](images/PersonToPersonDTO.png?raw=true "PersonToPersonDTO definition")
@@ -25,9 +24,8 @@ I took a look at the code that it generates and it did not seem at all bad to me
  
  # Car mapper example
  
- - Automatic mapping atributes with same name and type (ignoreProperty,surname, make)
- - Custom converter Brake<->String. Property brake-> brakeName (@Mapper(uses = {CarConverters.class}))
- - Mapping atributes with same type and different name: numberOfSeats->seatCount (You only have to declare in CarMapper)
+ - Automatic mapping attributes with same name and type
+ - Mapping attributes with same type and different name: ignoreField->fieldToIgnore (You only have to declare in CarMapper)
  - Ignore property wont be mapped (ignore=true)
  - @DecoratedWith(CarMapperDecorator.class) will allow to overwrite any value.
  
